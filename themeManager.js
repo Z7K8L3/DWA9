@@ -1,7 +1,20 @@
 // ThemeManager.js
 class ThemeManager {
-    // ... (ThemeManager code)
-  }
+    constructor() {
+        this.themes = {
+          night: { dark: '255, 255, 255', light: '10, 10, 20' },
+          day: { dark: '10, 10, 20', light: '255, 255, 255' },
+        };
+      }
+    
+      setTheme(theme) {
+        if (this.themes[theme]) {
+          const { dark, light } = this.themes[theme];
+          document.documentElement.style.setProperty('--color-dark', dark);
+          document.documentElement.style.setProperty('--color-light', light);
+        }
+      }
+    }
   
   export default ThemeManager;
   

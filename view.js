@@ -1,5 +1,5 @@
 // View.js
-import BookPreviewComponent from './bookPreviewComponent';
+import BookPreviewComponent from './book-preview';
 
 class View {
   constructor() {
